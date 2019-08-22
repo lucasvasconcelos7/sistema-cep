@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/img/local.png" />
+    <title>Pesquisa por CEP</title>
+</head>
+
+<body>
+    <section class="grid">
+        <h1>Pesquisa de CEP</h1>
+        <div class="item">
+            <input type="text" id="cep" maxlength="8" />
+            <span data-placeholder="CEP"></span>
+        </div>
+        <button id="submit">Pesquisar</button>
+    </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript">
+        $(".item input").on("focus", function() {
+            $(this).addClass("focus");
+        });
+
+        $(".item input").on("blur", function() {
+            if ($(this).val() == "")
+                $(this).removeClass("focus");
+        });
+    </script>
+</body>
+
+</html>
